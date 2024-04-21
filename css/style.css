@@ -1,0 +1,2024 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+  list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden; 
+}
+
+p{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+:root{
+  --white-color:#ffffff;
+  --black-color:#000000;
+  --main-color:#361D61;
+  --supporting-color:#C5C4FE;
+  --supporting-color-two:#E7E7EC;
+  --gray-color:#464545;
+  --light-gray-color:#eee;
+}
+
+.heading{
+    margin-bottom: 20px;
+}
+.common--header{
+    font-weight: 700;
+    color: var(--gray-color);
+}
+
+.fa-star,
+.fa-pen,
+.fa-play{
+    padding: 5px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.form-header{
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--main-color);
+    padding: 13px 10px 14px 10px;
+    color: var(--white-color);
+    border-left: 8px solid rgba(0, 0, 0, .2);
+    letter-spacing: 1px;
+    display: block;
+    margin: 10px 0px 20px 0px;
+}
+
+form{
+    margin: 10px;
+}
+
+/* FirstNav Section Start */
+
+.first-nav{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding:10px 0px;
+    margin-bottom: 15px;
+  
+    .h6{
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+  
+    i{
+        color: var(--white-color);
+    }
+
+    input{
+        background-color: transparent;
+        border: none;
+    }
+
+    .icons i:hover{
+        color: var(--supporting-color);
+        cursor: pointer;
+    }
+
+    ::placeholder{
+        color: var(--white-color);
+    }
+  }
+  
+  /* FirstNav Section End */
+
+/* Nav Section Start */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    background:var(--white-color);
+    color:var(--black-color);
+    /* opacity: 0.85; */
+    z-index: 100;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.navbar a.active {
+    background-color:var(--black-color);
+    color:var(--white-color);
+  }
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+    background-color: var(--white-color);
+    color: var(--black-color);
+  }
+  
+
+.logo img{
+   width: 80px;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.menu-items{
+    display: flex;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.9rem;
+    font-size:15px;
+
+    a{
+        margin: 12px 6px;
+        background-color:#0000000D;
+        color: #0F0F0F;
+        padding: 6px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: .5s;
+    }
+    
+    a:hover{
+        background-color:black;
+        color: var(--white-color);
+    }
+}
+
+.navbar a{
+    color:var(--light-color);
+    text-decoration: none;
+    font-weight: 550;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+  .navbar a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+
+
+/* Nav Section End */
+
+/* Home Section Start */
+
+.home-section{
+    background-color:var(--supporting-color-two);
+    padding:10px 0px 70px 0px;
+
+   .slick-dots {
+   position: absolute; text-align:right;
+   list-style: none; display: block; top:-50px;
+   padding: 0; width: 100%; }
+      
+   .slick-dots li 
+   { position: relative; display: inline-block; 
+   height: 20px; width: 20px; margin: 0 5px; 
+   padding: 0; cursor: pointer; }
+
+.slick-dots li button 
+ { border: 0; background: transparent; 
+display: block; width: 8px; height: 8px;
+outline: none; line-height: 0; font-size: 0; 
+color: transparent; padding: 5px; cursor: pointer; }
+
+.slick-dots li button:hover, .slick-dots li button:focus 
+{ outline: none; }
+
+.slick-dots li button:hover:before, 
+.slick-dots li button:focus:before 
+{background-color:var(--main-color); }
+
+.slick-dots li button:before 
+{ position: absolute; top: 0; left: 0; width: 8px; height: 8px; text-align: center; color: var(--main-color); border:3px solid var(--main-color); border-radius:50%; -webkit-font-smoothing: antialiased;opacity: 1; }
+
+.slick-dots li.slick-active button:before 
+{ color: var(--main-color);  width: 8px; background-color:var(--main-color);position: absolute; top: 0; left: 0; height: 8px;
+    border: 3px solid var(--main-color);
+}
+.slick-dots li button::before {
+  content: "";
+  }
+}
+
+.featured-videos{ 
+
+.slide-content{
+    margin-top: 280px;   
+}    
+
+.title,
+.data{
+ color:var(--white-color);
+}  
+.title{
+    font-weight: 500;
+}
+
+.slide-one,
+.slide-two,
+.slide-three,
+.slide-four,
+.slide-five,
+.slide-six,
+.slide-seven,
+.slide-eight,
+.slide-nine{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    position: relative;
+}
+
+.play-icon img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.slide-one{
+    background-image: url('https://www.gamereactor.eu/media/02/_1830203b.png');
+}
+.slide-two{
+    background-image: url('https://ijec.org/wp-content/uploads/2013/07/Wind-Turbines03-1170x820.jpg');
+}
+.slide-three{
+    background-image: url('https://i.ytimg.com/vi/001y4nn7258/maxresdefault.jpg');
+}
+.slide-four{
+    background-image: url('https://akm-img-a-in.tosshub.com/indiatoday/images/story/201309/katy_660_090613044215.jpg?VersionId=U7KW5IQBIdk1zPvBGW_5jO0NcR1SrL8m&size=690:388');
+}
+.slide-five{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3zRSqc2unW6lllYeL6PE7Ph3JwYbYc8CHs5mWZSyqcg&s');
+}
+.slide-six{
+    background-image: url('https://coconuts.co/wp-content/uploads/2023/10/image-3-1.jpg');
+}
+.slide-seven{
+    background-image: url('https://static1.millenium.org/article_old/images/contenu/actus/wow/wow_blog_cafe_dev_retrospective_raid_03_sd.jpg');
+}
+.slide-eight{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyUi8_yFFXvdtWwI_aFoE8Vh9v8nspNH6hJpqy8Duqienj7snPMB8W4YXZ8D2FlI3n3SY&usqp=CAU');
+}
+.slide-nine{
+    background-image: url('https://photos.thetrek.co/wp-content/uploads/2014/10/snowcupsPhilipp-Kobel.jpg');
+}
+
+.slide-one:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://www.gamereactor.eu/media/02/_1830203b.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-two:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://ijec.org/wp-content/uploads/2013/07/Wind-Turbines03-1170x820.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-three:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://i.ytimg.com/vi/001y4nn7258/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-four:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://akm-img-a-in.tosshub.com/indiatoday/images/story/201309/katy_660_090613044215.jpg?VersionId=U7KW5IQBIdk1zPvBGW_5jO0NcR1SrL8m&size=690:388');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-five:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3zRSqc2unW6lllYeL6PE7Ph3JwYbYc8CHs5mWZSyqcg&s');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-six:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://coconuts.co/wp-content/uploads/2023/10/image-3-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-seven:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://static1.millenium.org/article_old/images/contenu/actus/wow/wow_blog_cafe_dev_retrospective_raid_03_sd.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-eight:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyUi8_yFFXvdtWwI_aFoE8Vh9v8nspNH6hJpqy8Duqienj7snPMB8W4YXZ8D2FlI3n3SY&usqp=CAU');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-nine:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://photos.thetrek.co/wp-content/uploads/2014/10/snowcupsPhilipp-Kobel.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+
+}
+
+.slide:hover .play-icon img{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Home Section End */
+
+.post-card{
+    overflow: hidden;
+
+    img{
+      width: 200px;
+    }
+}
+
+/* Latest Post Section Start */
+
+.latest-post-section,
+.reviews-section{
+    margin: 50px 0px;
+
+    img{
+        height: 192px;
+    }
+
+    h6{
+      font-size: 14px;
+    }
+    .date{
+        color: var(--gray-color);
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+/* Latest Post Section End */
+
+/* Reviews Section Start */
+
+.reviews-section .date{
+    font-size: 13px;
+    margin: 0px;
+ p{
+    font-size: 13px;
+    margin: 0px;
+}
+}
+.reviews-section{
+    .icons i{
+        font-size: 28px;
+        height: 75px;
+        width: 75px;
+        color: var(--gray-color);
+        background-color: var(--light-gray-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .icons{
+        margin-left: 10px;
+    }
+    .num{
+      text-align: center;
+      margin-top: 8px;
+      color: var(--gray-color);
+      font-size: 14px;
+    }
+}
+
+/* Reviews Section End */
+
+/* Latest Videos Section Start */
+
+.latest-videos-section,
+.viewed-videos-section{
+    margin: 60px 0px;
+
+.reviews-slider{
+    margin-top: 50px;
+
+    .post-card{
+        margin-bottom: 13px;
+    }
+
+   .slick-dots {
+    position: absolute; text-align:right;
+    list-style: none; display: block; top:-70px;
+    padding: 0; width: 100%; }
+       
+    .slick-dots li 
+    { position: relative; display: inline-block; 
+    height: 20px; width: 20px; margin: 0 5px;
+    padding: 0; cursor: pointer; }
+ 
+ .slick-dots li button 
+  { border: 0; background: transparent; 
+ display: block; width: 8px; height: 8px;
+ outline: none; line-height: 0; font-size: 0; 
+ color: transparent; padding: 5px; cursor: pointer; }
+ 
+ .slick-dots li button:hover, .slick-dots li button:focus 
+ { outline: none; }
+ 
+ .slick-dots li button:hover:before, 
+ .slick-dots li button:focus:before 
+ {background-color:var(--main-color); }
+ 
+ .slick-dots li button:before 
+ { position: absolute; top: 0; left: 0; width: 8px; height: 8px; text-align: center; color: var(--main-color); border:3px solid var(--main-color); border-radius:50%; -webkit-font-smoothing: antialiased;opacity: 1; }
+ 
+ .slick-dots li.slick-active button:before 
+ { color: var(--main-color);  width: 8px; background-color:var(--main-color);position: absolute; top: 0; left: 0; height: 8px;
+     border: 3px solid var(--main-color);
+ }
+ .slick-dots li button::before {
+   content: "";
+   }
+}
+
+}
+
+/* Latest Videos Section End */
+
+/* Viewed Videos Section Start */
+
+
+
+/* Viewed Videos Section End */
+
+/* Sports Videos Section Start */
+
+.sports-videos-section{
+    
+.slide-one{
+    background-image: url('https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1674680119/owkdkevi7pt9hju41phi.jpg');
+}
+.slide-two{
+    background-image: url('https://i.ytimg.com/vi/tW5UHA_jMx8/hqdefault.jpg');
+}
+.slide-three{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjUkHNMDe4S5xhJFxnfpQBTeImI8yerC12Lxn-Wtfd6jtCw0Fd9Bo-Zk30sIBkxVrcioo&usqp=CAU');
+}
+.slide-four{
+    background-image: url('https://i.ytimg.com/vi/3Cg_LqODs3U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBO9rWnPlMbrZpqSEX_ztzW3banqg');
+}
+
+.slide-one:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1674680119/owkdkevi7pt9hju41phi.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-two:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://i.ytimg.com/vi/tW5UHA_jMx8/hqdefault.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-three:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjUkHNMDe4S5xhJFxnfpQBTeImI8yerC12Lxn-Wtfd6jtCw0Fd9Bo-Zk30sIBkxVrcioo&usqp=CAU');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+.slide-four:hover{
+    background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://i.ytimg.com/vi/3Cg_LqODs3U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBO9rWnPlMbrZpqSEX_ztzW3banqg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    transition:  all 0.3s ease-in-out;
+}
+}
+
+/* Sports Videos Section End */
+
+/* Gaming Videos Section */
+
+.gaming-videos-section{
+    margin: 50px 0px;
+
+.slick-dots {
+position: absolute; text-align:right;
+list-style: none; display: block; top:-70px;
+padding: 0; width: 100%; }
+   
+.slick-dots li 
+{ position: relative; display: inline-block; 
+height: 20px; width: 20px; margin: 0 5px;
+padding: 0; cursor: pointer; }
+
+.slick-dots li button 
+{ border: 0; background: transparent; 
+display: block; width: 8px; height: 8px;
+outline: none; line-height: 0; font-size: 0; 
+color: transparent; padding: 5px; cursor: pointer; }
+
+.slick-dots li button:hover, .slick-dots li button:focus 
+{ outline: none; }
+
+.slick-dots li button:hover:before, 
+.slick-dots li button:focus:before 
+{background-color:var(--main-color); }
+
+.slick-dots li button:before 
+{ position: absolute; top: 0; left: 0; width: 8px; height: 8px; text-align: center; color: var(--main-color); border:3px solid var(--main-color); border-radius:50%; -webkit-font-smoothing: antialiased;opacity: 1; }
+
+.slick-dots li.slick-active button:before 
+{ color: var(--main-color);  width: 8px; background-color:var(--main-color);position: absolute; top: 0; left: 0; height: 8px;
+ border: 3px solid var(--main-color);
+}
+.slick-dots li button::before {
+content: "";
+}
+
+
+    p{
+        color: var(--gray-color);
+        font-size: 15px;
+    }
+    .play{
+        color:var(--main-color);
+        font-weight: 500;
+    }
+    .post-card{
+        padding:20px;
+    }
+    .row{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin: 40px 0px;
+    }
+
+    .play-icon img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        transition: 0.3s ease-in-out
+    }      
+
+    .slide{
+        background-image: url('https://i.ytimg.com/vi/lS1TbgR4ubk/maxresdefault.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        position: relative;
+    }
+
+    .slide:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://i.ytimg.com/vi/lS1TbgR4ubk/maxresdefault.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+
+}
+
+.gaming-videos-section .slide:hover .play-icon img{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Gaming Videos Section */
+
+/* Food Health Section Start */
+
+.food-health-section{
+ margin: 50px 0px;
+ position: relative;
+
+
+ p{
+    color: var(--gray-color);
+    font-size: 15px;
+    text-align: justify;
+}
+.play{
+    color:var(--main-color);
+    font-weight: 500;
+}
+h4{
+    margin-bottom: 30px;
+}
+
+
+   .slide-content{
+    position:absolute;
+    bottom: 0px;
+   }
+
+    .title,
+    .data{
+     color:var(--white-color);
+    }  
+    .title{
+        font-weight: 500;
+    }
+    
+    
+    .play-icon img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        transition: 0.3s ease-in-out
+    }        
+    .slide{
+        background-image: url('https://img.freepik.com/premium-photo/proper-nutrition-food-set-healthy-lifestyle-healthy-eating-fruits-vegetables-pure-water-organic-diet-calorie-food-beautiful-body_771426-607.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        position: relative;
+    }
+
+    .slide:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://img.freepik.com/premium-photo/proper-nutrition-food-set-healthy-lifestyle-healthy-eating-fruits-vegetables-pure-water-organic-diet-calorie-food-beautiful-body_771426-607.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+}
+
+.food-health-section .slide:hover .play-icon img{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Food Health Section End */
+
+/* Footer Section Start */
+
+.footer-section{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 50px 0px 5px 0px;
+
+    img{
+        width: 100px;
+    }
+
+    h5{
+        margin-bottom: 20px;
+    }
+    ul li{
+        margin-bottom: 10px;
+    }
+
+    .border-b{
+        border-bottom: 1px solid var(--supporting-color);
+        margin: 10px;
+    }
+    p,li{
+        font-weight: 400;
+        font-size: 16px;
+    }
+    li:hover,
+    a:hover{
+        color: var(--supporting-color);
+        cursor: pointer;
+    }
+
+    .fa-chevron-right{
+        margin-right: 10px;
+    }
+}
+
+/* Footer Section End */
+
+/* Shorts Section Start */
+
+.shorts-section{
+    background-color:var(--supporting-color-two);
+    padding:10px 0px 70px 0px;
+
+   .slick-dots {
+   position: absolute; text-align:right;
+   list-style: none; display: block; top:-50px;
+   padding: 0; width: 100%; }
+      
+   .slick-dots li 
+   { position: relative; display: inline-block; 
+   height: 20px; width: 20px; margin: 0 5px; 
+   padding: 0; cursor: pointer; }
+
+.slick-dots li button 
+ { border: 0; background: transparent; 
+display: block; width: 8px; height: 8px;
+outline: none; line-height: 0; font-size: 0; 
+color: transparent; padding: 5px; cursor: pointer; }
+
+.slick-dots li button:hover, .slick-dots li button:focus 
+{ outline: none; }
+
+.slick-dots li button:hover:before, 
+.slick-dots li button:focus:before 
+{background-color:var(--main-color); }
+
+.slick-dots li button:before 
+{ position: absolute; top: 0; left: 0; width: 8px; height: 8px; text-align: center; color: var(--main-color); border:3px solid var(--main-color); border-radius:50%; -webkit-font-smoothing: antialiased;opacity: 1; }
+
+.slick-dots li.slick-active button:before 
+{ color: var(--main-color);  width: 8px; background-color:var(--main-color);position: absolute; top: 0; left: 0; height: 8px;
+    border: 3px solid var(--main-color);
+}
+.slick-dots li button::before {
+  content: "";
+  }
+
+  .shorts-slider{
+    margin-top: 80px;
+    text-align: center;
+    cursor: pointer;
+
+    .slide{
+        margin-bottom: 30px;
+       }
+    
+       .slide-content{
+        position:absolute;
+        bottom: 0px;
+       }
+    
+        .title,
+        .data{
+         color:var(--white-color);
+        }  
+        .title{
+            font-weight: 500;
+        }
+        
+        
+        .slide-one,
+        .slide-two,
+        .slide-three,
+        .slide-four,
+        .slide-five,
+        .slide-six,
+        .slide-seven,
+        .slide-eight,
+        .slide-nine,
+        .slide-ten{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            position: relative;
+        }
+        
+        .play-icon img{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+        
+        
+        
+        .slide-one{
+            background-image: url('https://w0.peakpx.com/wallpaper/627/734/HD-wallpaper-girl-and-sunrise-lady-mountain-waiting-woman.jpg');
+        }
+        .slide-two{
+            background-image: url('https://images.immediate.co.uk/production/volatile/sites/30/2013/06/Healthy-woman-in-the-kitchen-6cb20b5.jpg?quality=90&resize=440,400');
+        }
+        .slide-three{
+            background-image: url('https://thumbs.dreamstime.com/b/man-weight-training-equipment-sport-gym-22843139.jpg');
+        }
+        .slide-four{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAZ54HGd0kLh3rVY_dhdnrUZ-rCRL9UlKxA&usqp=CAU');
+        }
+        .slide-five{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZPHPAiZWhI4LKRVJ6W_ZWVpm546pZSo-NEA&usqp=CAU');
+        }
+        .slide-six{
+            background-image: url('https://img.mensxp.com/media/content/2020/Apr/Leading-B-Wood-Singers-Who-Lost-On-Reality-Shows1200_5ea7d3e1ba5f2.jpeg');
+        }
+        .slide-seven{
+            background-image: url('https://e0.pxfuel.com/wallpapers/331/99/desktop-wallpaper-this-madetomotivate-and-many-more-for-motivation-on-the-go-fit-girl-motivation-gym-inspiration-fitness-inspiration-female-gym-motivation.jpg');
+        }
+        .slide-eight{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-CXsgT-mIJGyD0_AOQixpQ5YOEa91Dosbag&usqp=CAU');
+        }
+        .slide-nine{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIqOn25FUKyzoIDXSRbuX7zfDQQ5SIwAZ3aQ&usqp=CAU');
+        }
+        .slide-ten{
+            background-image: url('https://assets.entrepreneur.com/content/3x2/2000/1654880763-GettyImages-1392166113.jpg?format=pjeg&auto=webp&crop=1:1'); 
+        }
+        
+    
+        .slide-one:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://w0.peakpx.com/wallpaper/627/734/HD-wallpaper-girl-and-sunrise-lady-mountain-waiting-woman.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        .slide-two:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://images.immediate.co.uk/production/volatile/sites/30/2013/06/Healthy-woman-in-the-kitchen-6cb20b5.jpg?quality=90&resize=440,400');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        .slide-three:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://thumbs.dreamstime.com/b/man-weight-training-equipment-sport-gym-22843139.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        .slide-four:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAZ54HGd0kLh3rVY_dhdnrUZ-rCRL9UlKxA&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        .slide-five:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZPHPAiZWhI4LKRVJ6W_ZWVpm546pZSo-NEA&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        .slide-six:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://img.mensxp.com/media/content/2020/Apr/Leading-B-Wood-Singers-Who-Lost-On-Reality-Shows1200_5ea7d3e1ba5f2.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        .slide-seven:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://e0.pxfuel.com/wallpapers/331/99/desktop-wallpaper-this-madetomotivate-and-many-more-for-motivation-on-the-go-fit-girl-motivation-gym-inspiration-fitness-inspiration-female-gym-motivation.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        .slide-eight:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-CXsgT-mIJGyD0_AOQixpQ5YOEa91Dosbag&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        .slide-nine:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIqOn25FUKyzoIDXSRbuX7zfDQQ5SIwAZ3aQ&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+
+        .slide-ten:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://assets.entrepreneur.com/content/3x2/2000/1654880763-GettyImages-1392166113.jpg?format=pjeg&auto=webp&crop=1:1');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+        }
+        
+        }
+}
+
+.shorts-section .slide:hover .play-icon img{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Shorts Section End */
+
+/* Music Section Start */
+
+.music-section{
+   margin: 50px 0px;
+   position: relative;
+
+   .slide{
+    margin-bottom: 30px;
+   }
+
+   .slide-content{
+    position:absolute;
+    bottom: 0px;
+   }
+
+    .title,
+    .data{
+     color:var(--white-color);
+    }  
+    .title{
+        font-weight: 500;
+    }
+    
+    
+    .slide-one,
+    .slide-two,
+    .slide-three,
+    .slide-four,
+    .slide-five,
+    .slide-six,
+    .slide-seven,
+    .slide-eight,
+    .slide-nine{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        position: relative;
+    }
+    
+    .play-icon img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    
+    
+    
+    .slide-one{
+        background-image: url('https://www.rollingstone.com/wp-content/uploads/2023/05/6-Ways-To-Build-Your-Brand-as-a-Musician-in-2023.jpg');
+    }
+    .slide-two{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR2z5xxnuX98l8ZIUsLpB_CvhGUvrVJCfn90j9N0-uHlgD8ffMKdKNzGd2lzb2mGlngrg&usqp=CAU');
+    }
+    .slide-three{
+        background-image: url('https://s3.ap-south-1.amazonaws.com/data.com.live101.in/images/home_page_component/website_banner_desktop.webp');
+    }
+    .slide-four{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrCG149t9l08AXQ4Kp_MGZNUmRDM815qEGVwdZw55-GvWcfgZJP-30yg214n0XFdq1kM&usqp=CAU');
+    }
+    .slide-five{
+        background-image: url('https://www.iwmbuzz.com/wp-content/uploads/2021/09/reality-show-changed-the-fate-of-this-romantic-singer-shreya-ghoshal-bhansalis-mother-recommended-her-to-be-in-the-film-deets-inside-3.jpg');
+    }
+    .slide-six{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYJ7TnZBVuNLvaI2dNU2KfSSNanFTCgO-Fg&usqp=CAU');
+    }
+    .slide-seven{
+        background-image: url('https://img.freepik.com/premium-photo/pretty-asian-female-singer-playing-acoustic-guitar-with-male-playing-electric-keyboard-recording-songs-by-using-studio-microphone-pop-shield-microphone-blue-red-light-duet-session_43263-3031.jpg');
+    }
+    .slide-eight{
+        background-image: url('https://www.rollingstone.com/wp-content/uploads/2023/05/6-Ways-To-Build-Your-Brand-as-a-Musician-in-2023.jpg');
+    }
+    .slide-nine{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrCG149t9l08AXQ4Kp_MGZNUmRDM815qEGVwdZw55-GvWcfgZJP-30yg214n0XFdq1kM&usqp=CAU');
+    }
+    
+
+    .slide-one:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://www.rollingstone.com/wp-content/uploads/2023/05/6-Ways-To-Build-Your-Brand-as-a-Musician-in-2023.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    .slide-two:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR2z5xxnuX98l8ZIUsLpB_CvhGUvrVJCfn90j9N0-uHlgD8ffMKdKNzGd2lzb2mGlngrg&usqp=CAU');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    .slide-three:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://s3.ap-south-1.amazonaws.com/data.com.live101.in/images/home_page_component/website_banner_desktop.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    .slide-four:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrCG149t9l08AXQ4Kp_MGZNUmRDM815qEGVwdZw55-GvWcfgZJP-30yg214n0XFdq1kM&usqp=CAU');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    .slide-five:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://www.iwmbuzz.com/wp-content/uploads/2021/09/reality-show-changed-the-fate-of-this-romantic-singer-shreya-ghoshal-bhansalis-mother-recommended-her-to-be-in-the-film-deets-inside-3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    .slide-six:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYJ7TnZBVuNLvaI2dNU2KfSSNanFTCgO-Fg&usqp=CAU');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    .slide-seven:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://img.freepik.com/premium-photo/pretty-asian-female-singer-playing-acoustic-guitar-with-male-playing-electric-keyboard-recording-songs-by-using-studio-microphone-pop-shield-microphone-blue-red-light-duet-session_43263-3031.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    .slide-eight:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://www.rollingstone.com/wp-content/uploads/2023/05/6-Ways-To-Build-Your-Brand-as-a-Musician-in-2023.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    .slide-nine:hover{
+        background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrCG149t9l08AXQ4Kp_MGZNUmRDM815qEGVwdZw55-GvWcfgZJP-30yg214n0XFdq1kM&usqp=CAU');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        transition:  all 0.3s ease-in-out;
+    }
+    
+    }
+    
+    .music-section .slide:hover .play-icon img{
+        opacity: 1;
+        cursor: pointer;
+    }
+
+/* Music Section End */
+
+/* Dance Section Start */
+
+.dance-section{
+    margin: 50px 0px;
+    position: relative;
+ 
+    .slide{
+     margin-bottom: 30px;
+    }
+ 
+    .slide-content{
+     position:absolute;
+     bottom: 0px;
+    }
+ 
+     .title,
+     .data{
+      color:var(--white-color);
+     }  
+     .title{
+         font-weight: 500;
+     }
+     
+     
+     .slide-one,
+     .slide-two,
+     .slide-three,
+     .slide-four,
+     .slide-five,
+     .slide-six{
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         position: relative;
+     }
+     
+     .play-icon img{
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%,-50%);
+         opacity: 0;
+         transition: 0.3s ease-in-out;
+     }
+     
+     .slide-one{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTETOd5UqROEfBmNboLp9jWY33nOIgbKbn5vn2h0LdWLjN92066Kd0LSVKUbNETe0OWJX4&usqp=CAU');
+     }
+     .slide-two{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRdIRFYxU-Hyl_OhhzgB2fJ0A1ceBXsd-1vw&usqp=CAU');
+     }
+     .slide-three{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFf45V7TlyEB6rtEzdehG9N9t6F5BVjEnwpA&usqp=CAU');
+     }
+     .slide-four{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA12pnlThtM_v2xUQojPC6ZqW5JAbrrPdckg&usqp=CAU');
+     }
+     .slide-five{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkKc3La5FSqR4ax_7wz13G6SjzOBx7FwY45Q&usqp=CAU');
+     }
+     .slide-six{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZksavleNMLKm0TSbYRcsfrbek6B-O0b-eiQ&usqp=CAU');
+     }
+     
+     .slide-one:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTETOd5UqROEfBmNboLp9jWY33nOIgbKbn5vn2h0LdWLjN92066Kd0LSVKUbNETe0OWJX4&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-two:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRdIRFYxU-Hyl_OhhzgB2fJ0A1ceBXsd-1vw&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-three:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFf45V7TlyEB6rtEzdehG9N9t6F5BVjEnwpA&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-four:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA12pnlThtM_v2xUQojPC6ZqW5JAbrrPdckg&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-five:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkKc3La5FSqR4ax_7wz13G6SjzOBx7FwY45Q&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-six:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZksavleNMLKm0TSbYRcsfrbek6B-O0b-eiQ&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     
+     }
+     
+     .dance-section .slide:hover .play-icon img{
+         opacity: 1;
+         cursor: pointer;
+     }
+
+/* Dance Section End */
+
+/* News Section Start */
+
+.news-section{
+    margin: 50px 0px;
+    position: relative;
+ 
+    .slide{
+     margin-bottom: 30px;
+    }
+ 
+    .slide-content{
+     position:absolute;
+     bottom: 0px;
+    }
+ 
+     .title,
+     .data{
+      color:var(--white-color);
+     }  
+     .title{
+         font-weight: 500;
+     }
+     
+     
+     .slide-one,
+     .slide-two,
+     .slide-three,
+     .slide-four,
+     .slide-five,
+     .slide-six,
+     .slide-seven,
+     .slide-eight,
+     .slide-nine{
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         position: relative;
+     }
+     
+     .play-icon img{
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%,-50%);
+         opacity: 0;
+         transition: 0.3s ease-in-out;
+     }
+     
+     .slide-one{
+         background-image: url('https://static.vecteezy.com/system/resources/thumbnails/006/299/370/original/world-breaking-news-digital-earth-hud-rotating-globe-rotating-free-video.jpg');
+     }
+     .slide-two{
+         background-image: url('https://yt3.googleusercontent.com/y_esGAQOhX4rTpWvrALErAJlFbm_2TIVrvcVfcZny7TuA8dJZgOQcC6KRfd_J5hljFe-foYXj9U=s900-c-k-c0x00ffffff-no-rj');
+     }
+     .slide-three{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJhaqyazy-71wILnLsbVuIwGVK9m5xOy6dCw&usqp=CAU');
+     }
+     .slide-four{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLQ1IhHM39YucCIz6J3YXGBo7i719TbWJ3A&usqp=CAU');
+     }
+     .slide-five{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnlpoaXijLo9mgXvIWYs1DMa_N8BNk1IUCsg&usqp=CAU');
+     }
+     .slide-six{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKdC-EvW6jKTRPRAjYWxHVw9Ipb3ILgKQnA&usqp=CAU');
+     }
+     .slide-seven{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpKROjvf_VaDiDj3YnQCo8EkI43JRdjEA1-Q&usqp=CAU');
+    }
+    .slide-eight{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQac2iC33wavmknKFeFJ5Fm2YwTMAMX0WxR1A&usqp=CAU');
+    }
+    .slide-nine{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3nW9zJqacGZJUVLgtnIdeYYqYqIiuDaQ9A&usqp=CAU');
+    }
+
+     .slide-one:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://static.vecteezy.com/system/resources/thumbnails/006/299/370/original/world-breaking-news-digital-earth-hud-rotating-globe-rotating-free-video.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-two:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://yt3.googleusercontent.com/y_esGAQOhX4rTpWvrALErAJlFbm_2TIVrvcVfcZny7TuA8dJZgOQcC6KRfd_J5hljFe-foYXj9U=s900-c-k-c0x00ffffff-no-rj');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-three:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJhaqyazy-71wILnLsbVuIwGVK9m5xOy6dCw&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-four:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLQ1IhHM39YucCIz6J3YXGBo7i719TbWJ3A&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-five:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnlpoaXijLo9mgXvIWYs1DMa_N8BNk1IUCsg&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-six:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKdC-EvW6jKTRPRAjYWxHVw9Ipb3ILgKQnA&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+        .slide-seven:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpKROjvf_VaDiDj3YnQCo8EkI43JRdjEA1-Q&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           }
+        .slide-eight:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQac2iC33wavmknKFeFJ5Fm2YwTMAMX0WxR1A&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           }
+        .slide-nine:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3nW9zJqacGZJUVLgtnIdeYYqYqIiuDaQ9A&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           }
+     
+     }
+     
+     .news-section .slide:hover .play-icon img{
+         opacity: 1;
+         cursor: pointer;
+     }
+
+/* News Section End */
+
+/* Interiors Section Start */
+
+.interiors-section{
+    margin: 50px 0px;
+    position: relative;
+ 
+    .slide{
+     margin-bottom: 30px;
+    }
+ 
+    .slide-content{
+     position:absolute;
+     bottom: 0px;
+    }
+ 
+     .title,
+     .data{
+      color:var(--white-color);
+     }  
+     .title{
+         font-weight: 500;
+     }
+     
+     
+     .slide-one,
+     .slide-two,
+     .slide-three,
+     .slide-four,
+     .slide-five,
+     .slide-six,
+     .slide-seven{
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         position: relative;
+     }
+     
+     .play-icon img{
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%,-50%);
+         opacity: 0;
+         transition: 0.3s ease-in-out;
+     }
+     
+     .slide-one{
+         background-image: url('/images/interiors/1.jpg');
+     }
+     .slide-two{
+         background-image: url('/images/interiors/2.jpg');
+     }
+     .slide-three{
+         background-image: url('/images/interiors/3.jpg');
+     }
+     .slide-four{
+         background-image: url('/images/interiors/4.jpg');
+     }
+     .slide-five{
+         background-image: url('/images/interiors/5.jpg');
+     }
+     .slide-six{
+         background-image: url('/images/interiors/6.jpg');
+     }
+     .slide-seven{
+        background-image: url('/images/interiors/7.jpg');
+     }
+     
+     .slide-one:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/interiors/1.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-two:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/interiors/2.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-three:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/interiors/3.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-four:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/interiors/4.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-five:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/interiors/5.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-six:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/interiors/6.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+        .slide-seven:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/interiors/7.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           }
+     
+     }
+     
+     .interiors-section .slide:hover .play-icon img{
+         opacity: 1;
+         cursor: pointer;
+     }
+
+/* Interiors Section End */
+
+/* Home Decor Section Start */
+
+.home-decor-section{
+    margin: 50px 0px;
+    position: relative;
+ 
+    .slide{
+     margin-bottom: 30px;
+    }
+ 
+    .slide-content{
+     position:absolute;
+     bottom: 0px;
+    }
+ 
+     .title,
+     .data{
+      color:var(--white-color);
+     }  
+     .title{
+         font-weight: 500;
+     }
+     
+     
+     .slide-one,
+     .slide-two,
+     .slide-three,
+     .slide-four,
+     .slide-five,
+     .slide-six,
+     .slide-seven,
+     .slide-eight,
+     .slide-nine,
+     .slide-ten{
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         position: relative;
+     }
+     
+     .play-icon img{
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%,-50%);
+         opacity: 0;
+         transition: 0.3s ease-in-out;
+     }
+     
+     .slide-one{
+         background-image: url('/images/homeDecor/1.jpg');
+     }
+     .slide-two{
+         background-image: url('/images/homeDecor/2.jpg');
+     }
+     .slide-three{
+         background-image: url('/images/homeDecor/3.jpg');
+     }
+     .slide-four{
+         background-image: url('/images/homeDecor/4.jpg');
+     }
+     .slide-five{
+         background-image: url('/images/homeDecor/5.jpg');
+     }
+     .slide-six{
+         background-image: url('/images/homeDecor/6.jpg');
+     }
+     .slide-seven{
+        background-image: url('/images/homeDecor/7.jpg');
+    }
+    .slide-eight{
+        background-image: url('/images/homeDecor/8.jpg');
+    }
+    .slide-nine{
+        background-image: url('/images/homeDecor/9.jpg');
+    }
+    .slide-ten{
+        background-image: url('/images/homeDecor/10.jpg');
+    }
+     
+     .slide-one:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/1.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-two:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/2.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-three:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/3.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-four:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/4.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-five:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/5.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-six:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/6.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+        .slide-seven:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/7.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           }
+           .slide-eight:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/8.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           } 
+           .slide-nine:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/9.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           } 
+           .slide-ten:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('/images/homeDecor/10.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           }         
+     
+     }
+     
+     .home-decor-section .slide:hover .play-icon img{
+         opacity: 1;
+         cursor: pointer;
+     }
+
+/* Home Decor Section End */
+
+/* Knowledge Section Start */
+
+.knowledge-section{
+    margin: 50px 0px;
+    position: relative;
+ 
+    .slide{
+     margin-bottom: 30px;
+    }
+ 
+    .slide-content{
+     position:absolute;
+     bottom: 0px;
+    }
+ 
+     .title,
+     .data{
+      color:var(--white-color);
+     }  
+     .title{
+         font-weight: 500;
+     }
+     
+     
+     .slide-one,
+     .slide-two,
+     .slide-three,
+     .slide-four,
+     .slide-five,
+     .slide-six,
+     .slide-seven,
+     .slide-eight,
+     .slide-nine{
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         position: relative;
+     }
+     
+     .play-icon img{
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%,-50%);
+         opacity: 0;
+         transition: 0.3s ease-in-out;
+     }
+     
+     .slide-one{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DmiL5p_at_Yei4rEBqr3Ixdn1NloYVud_MV_rDD8PEWlCO_gbGj5R0gjgtQD6Fe5LEk&usqp=CAU');
+     }
+     .slide-two{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjlHfEIsijVeo2PsTHXZCSwdXHf6aHTZaVPg&usqp=CAU');
+     }
+     .slide-three{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRpcmFZ0jR0jRq5odl8iIgJrl1hfbQzEaWFQ&usqp=CAU');
+     }
+     .slide-four{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3NBTpwIE6BHOyfc1XOuhVq7JqE4mfiZMFRA&usqp=CAU');
+     }
+     .slide-five{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8b3mRbgCXQ-gxDeFvj7YokdceOWoLw0yJg&usqp=CAU');
+     }
+     .slide-six{
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1sM2GITmQvotsvFbc-vvA4YBV9b5hvQGOjQ&usqp=CAU');
+     }
+     .slide-seven{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Xh04KUGV17HUXfzm1-rd2aWkFiKBWr8oeZO94X64OKj-OBCfwKjNj3ENY6ZVOomB6zw&usqp=CAU');
+    }
+    .slide-eight{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDrWQx76C8OyIpMeTaom9e5fmjG3ty-lwMJUUbqPJU7OdMbJdPRYhOUVf_MhNZ08-aZ1g&usqp=CAU');
+    }
+    .slide-nine{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxKJIWVxuuzL6FzIFDITq9VWk7PZzSz71HH6yM_VluNjrlbvYxeosuOX33lclw-jp12Lk&usqp=CAU');
+    }
+     
+     .slide-one:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DmiL5p_at_Yei4rEBqr3Ixdn1NloYVud_MV_rDD8PEWlCO_gbGj5R0gjgtQD6Fe5LEk&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-two:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjlHfEIsijVeo2PsTHXZCSwdXHf6aHTZaVPg&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-three:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRpcmFZ0jR0jRq5odl8iIgJrl1hfbQzEaWFQ&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-four:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3NBTpwIE6BHOyfc1XOuhVq7JqE4mfiZMFRA&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-five:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8b3mRbgCXQ-gxDeFvj7YokdceOWoLw0yJg&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+     .slide-six:hover{
+         background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1sM2GITmQvotsvFbc-vvA4YBV9b5hvQGOjQ&usqp=CAU');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 350px;
+         transition:  all 0.3s ease-in-out;
+        }
+        .slide-seven:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Xh04KUGV17HUXfzm1-rd2aWkFiKBWr8oeZO94X64OKj-OBCfwKjNj3ENY6ZVOomB6zw&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           }
+           .slide-eight:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDrWQx76C8OyIpMeTaom9e5fmjG3ty-lwMJUUbqPJU7OdMbJdPRYhOUVf_MhNZ08-aZ1g&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           } 
+           .slide-nine:hover{
+            background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(15, 15, 15, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxKJIWVxuuzL6FzIFDITq9VWk7PZzSz71HH6yM_VluNjrlbvYxeosuOX33lclw-jp12Lk&usqp=CAU');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            transition:  all 0.3s ease-in-out;
+           } 
+
+     }
+     
+     .knowledge-section .slide:hover .play-icon img{
+         opacity: 1;
+         cursor: pointer;
+     }
+
+/* Knowledge Section End */
+
+/* Mobile Responsiveness Start */
+
+@media only screen and (min-width:200px) and (max-width:767px){
+
+
+    .music-section,
+    .dance-section,
+    .interiors-section,
+    .knowledge-section,
+    .music-section,
+    .news-section,
+    .home-decor-section,
+    .shorts-section {
+        margin: 20px 0px;
+    }    
+
+    .shorts-section .shorts-slider{
+        margin-top:30px;
+
+        .slick-dots {
+            text-align: center;
+            top: 370px;
+        }
+    }
+
+    .navbar a{
+        font-weight: 600;
+    }
+
+    .post-card{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 15px;
+
+        h6{
+            font-size: 16px;
+        }
+        .date{
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        img{
+            width:100%;
+        }
+    }
+
+ 
+
+    .logo img{
+        width: 60px;
+     }
+
+    .navbar>.container{
+     flex-wrap: nowrap;
+    } 
+    
+     .menu-items{
+      overflow-x: scroll;
+      padding: 10px;
+      
+     li{
+       font-size: 14px;
+       position: relative;
+       margin-left:0.2rem;
+     }
+    }
+
+.home-section
+.slick-dots {
+    text-align: center;
+    top: 370px;
+}
+
+::-webkit-scrollbar{
+    width: 1px;
+}
+
+.footer-section
+h5 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.navbar a::before {
+    width: 0%;
+  }
+
+}
+
+ /* Mobile Responsiveness End */
+  
+ /* Tab Responsiveness Start */
+  
+ @media only screen and (min-width:768px) and (max-width:1024px){
+
+ .logo img{
+    width: 60px;
+ }
+
+ .post-card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px;
+
+    h6{
+        font-size: 16px;
+    }
+    .date{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+.navbar>.container{
+    flex-wrap: nowrap;
+   } 
+   
+    .menu-items{
+     overflow-x: scroll;
+     padding: 10px;
+     
+    li{
+      font-size: 14px;
+      position: relative;
+      margin-left:1rem;
+    }
+   }
+
+   ::-webkit-scrollbar{
+    width: 1px;
+   }
+
+ }    
+
+
