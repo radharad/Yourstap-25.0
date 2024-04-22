@@ -1,7 +1,7 @@
 # Yourstap
 
 ## Description:
-This is a Yourstap website built using HTML, CSS, and JavaScript and Modern Libraries to showcase my skills.
+This is a Yourstap website built using HTML, CSS, and JavaScript and Modern Librariess.
 
 ## Installation Instructions:
 1. Clone the repository: `git clone https://github.com/radharad/Yourstap-25.0.git `
